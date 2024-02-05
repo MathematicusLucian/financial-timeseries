@@ -9,6 +9,13 @@ API_KEY = os.getenv('API_KEY')
 stock_symbols = ['BAC']
 nasdaqdatalink.ApiConfig.api_key = API_KEY
 
+def save__timeseries_csv(data):
+    data.to_csv('data/timeseries.csv')
+
+def read__timeseries_csv():
+    df = pd.read_csv('data/timeseries.csv', header=0, index_col='Date', parse_dates=True)
+    return df
+
 def get__timeseries_of_stock(stock_name: str, source: str, start_date, end_date):
     if(source=="nasdaq"):
         stock_name_prefixed = "WIKI/" + stock_name

@@ -3,9 +3,9 @@ import stock_interface
 #Bank of America
 bac = stock_interface.get__timeseries('BAC', 'nasdaq', 7)
 
-print(bac)
+stock_interface.save__timeseries_csv(bac)
 
-# print('--- \nStock: BAC \n--- \nHead:')
-# print(bac.head())
-# print('\nTail:')
-# print(bac.tail())
+print('--- \nStock: BAC \n--- \nHead:')
+print(bac.head())
+print('\nTail:')
+print(bac.tail())
