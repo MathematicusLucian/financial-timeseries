@@ -1,6 +1,7 @@
 import pandas as pd
 import pandas_datareader as pdr
 import nasdaqdatalink
+import numpy as np
 import datetime 
 import os
 from dotenv import load_dotenv
@@ -38,7 +39,10 @@ def get__timeseries_monthly_avg(timeseries):
     return timeseries('M').mean()
 
 def get__timeseries_close(timeseries):
-    timeseries['Close']
+    return timeseries['Close']
 
 def get__timeseries_close_minus10(timeseries):
-    timeseries['Close'][-10:]
+    return timeseries['Close'][-10:]
+
+def create__plot(data):
+    return data.plot(grid=True)
