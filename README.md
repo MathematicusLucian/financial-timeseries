@@ -5,7 +5,7 @@
 
 ## Introduction
 
-A Python3 FastAPI app that utilises Pandas, MatPlotLib, and Numpy (libraries), to process data fetched from [Stooq](https://stooq.com/db/) and Nasdaq free data APIs.
+A Python3 FastAPI app that utilises Pandas, MatPlotLib, and Numpy (libraries), to process data fetched from [Stooq](https://stooq.com/db/) and the [Nasdaq API](https://data.nasdaq.com/tools/python).
 
 ### Aim: 
 To demonstrate 'panel data' time series analysis of stock data.
@@ -19,8 +19,8 @@ To demonstrate 'panel data' time series analysis of stock data.
 
 ### Data Sources
 
-- [Stooq](https://stooq.com/db/)
-- Nasdaq free data API
+- Via Panda's DataReader: [Stooq](https://stooq.com/db/).  (*Also: Tiingo • IEX • Alpha Vantage • Econdb • Enigma • Quandl • St.Louis FED (FRED) • Kenneth French’s data library • World Bank • OECD • Eurostat • Thrift Savings Plan • Nasdaq Trader symbol definitions • MOEX • Naver Finance • Yahoo Finance*)
+- [Nasdaq API](https://data.nasdaq.com/tools/python)
 
 ## Current Features: 
 
@@ -30,10 +30,10 @@ To demonstrate 'panel data' time series analysis of stock data.
 
 ## Long-term Objectives
 
-- **Deploy as AWS Lambda**
+- **Deploy as a Firebase function or a AWS Lambda** (SAM API, etc., and even potentially as multiple lambdas functions.)
 - **Algorithimic trading simulation:** Buying/selling when the price goes above/below a set threshold (determined by algorithm.)
 - **Backtesting:** Running the algorithms against past data to see if they are successful (to reduce risk of utilisation of said algorithms to predict future stock movements.)
-- **UI:** Rather than Jupyter Notebook, present asynchronously via a dashboard built on Angular/React (that queries a FastAPI/Flask microservice.)
+- **UI:** Rather than Jupyter Notebook, present asynchronously via a dashboard built on Grafana/ELK, or even Angular/React (that queries a FastAPI/Flask microservice.)
 
 ## Endpoints
 
