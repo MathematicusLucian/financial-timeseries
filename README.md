@@ -6,13 +6,15 @@ A Python3 module that utilises the Pandas, MatPlotLib, and Numpy libraries, and 
 
 - **Time series:** Sequence of numerical data points representing successive, equally spaced points in time, e.g. stock price at regular intervals (presented on a blotter where: price on x-axis; date on y-axis.)
 
-***MapPlotLib of Bank of America timeseries for 5 days from 29 Jan 2024 to 2 Feb 2024:***
-![BAC timeseries](./assets/imgs/timeseries_bac.png)
+    ***MapPlotLib of Bank of America timeseries for 5 days from 29 Jan 2024 to 2 Feb 2024:***
+    ![BAC timeseries](./assets/imgs/timeseries_bac.png)
+
+- **Environment:** VirtualEnv, with requirements.txt etc..
+- **FastAPI (or Flask):** As an microservice that can be queried by a UI, etc..
 
 ## Long-term
 
-- **Environment:** With requirements.txt etc..
-- **FastAPI (or Flask):** Present this as an microservice that can be queried by a UI, etc..
+- **Deploy as AWS Lambda**
 - **Algorithimic trading simulation:** Buying/selling when the price goes above/below a set threshold (determined by algorithm.)
 - **Backtesting:** Running the algorithms against past data to see if they are successful (to reduce risk of utilisation of said algorithms to predict future stock movements.)
 - **UI:** Rather than Jupyter Notebook, present asynchronously via a dashboard built on Angular/React (that queries a FastAPI/Flask microservice.)
@@ -30,4 +32,4 @@ A Python3 module that utilises the Pandas, MatPlotLib, and Numpy libraries, and 
 
 ## How to Run
 
-`` python3 script.py ``
+`` uvicorn timeseries_processor.src.app:app --reload --host 0.0.0.0 --port 80 ``
