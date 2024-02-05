@@ -33,3 +33,12 @@ def get__timeseries(stock_name: str, source: str, period_back: int):
     start_date = date_week_ago
     end_date =  date_today
     return get__timeseries_of_stock(stock_name, source, start_date, end_date)
+
+def get__timeseries_monthly_avg(timeseries):
+    return timeseries('M').mean()
+
+def get__timeseries_close(timeseries):
+    timeseries['Close']
+
+def get__timeseries_close_minus10(timeseries):
+    timeseries['Close'][-10:]
