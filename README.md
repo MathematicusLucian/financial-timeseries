@@ -37,15 +37,18 @@ To demonstrate 'panel data' time series analysis of stock data.
 
 ## Endpoints
 
-**Get a time series:** Local machine:
-`` http://0.0.0.0/v1/stock_api/[time_series]/[x]/[y]/[z] `` 
+**Get a time series:** 
+
+`` /v1/stock_api/time_series/[x]/[y]/[z] `` 
+
+![timeseries_api_response](./assets/imgs/timeseries_api_response.png)
 
 Where:
 - x: stock name (abbreviation), e.g. 'BAC' (Bank of America)
 - y: data source, e.g. Stooq
 - z: how many days back to include in the series
 
-E.g. time series of the last 7 days:
+E.g. (local machine) for a Stooq-supplied Bank of America time series beginning from 7 days ago:
 `` http://0.0.0.0/v1/stock_api/time_series/BAC/stooq/7 `` 
 
 ## How to Run
