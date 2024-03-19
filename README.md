@@ -1,6 +1,7 @@
 # financial-timeseries
 
 ![BAC timeseries](./assets/imgs/timeseries_bac.png)
+
 ***MapPlotLib of Bank of America time series for 5 days from 29 Jan 2024 to 2 Feb 2024:***
 
 ## Introduction
